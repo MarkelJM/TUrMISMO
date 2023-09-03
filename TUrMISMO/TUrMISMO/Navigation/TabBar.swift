@@ -11,8 +11,8 @@ import MapKit
 struct TabBarView: View {
     @State private var selectedPlace: TouristModel? = nil
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 40.4167, longitude: -3.7038), // Centro de España
-        span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
+        center: CLLocationCoordinate2D(latitude: 41.6520, longitude: -4.7245),
+        span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3)
     )
     @State private var isTabViewHidden: Bool = true
 
