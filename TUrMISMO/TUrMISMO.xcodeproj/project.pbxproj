@@ -1,0 +1,917 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D380FBEC2A9E08270057104B /* TUrMISMOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FBEB2A9E08270057104B /* TUrMISMOApp.swift */; };
+		D380FBEE2A9E08270057104B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FBED2A9E08270057104B /* ContentView.swift */; };
+		D380FBF02A9E08280057104B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D380FBEF2A9E08280057104B /* Assets.xcassets */; };
+		D380FBF32A9E08280057104B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D380FBF22A9E08280057104B /* Preview Assets.xcassets */; };
+		D380FBFD2A9E08280057104B /* TUrMISMOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FBFC2A9E08280057104B /* TUrMISMOTests.swift */; };
+		D380FC072A9E08280057104B /* TUrMISMOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FC062A9E08280057104B /* TUrMISMOUITests.swift */; };
+		D380FC092A9E08280057104B /* TUrMISMOUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FC082A9E08280057104B /* TUrMISMOUITestsLaunchTests.swift */; };
+		D380FC1A2A9E48F80057104B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D380FC192A9E48F80057104B /* FirebaseAnalyticsSwift */; };
+		D380FC1C2A9E48F80057104B /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D380FC1B2A9E48F80057104B /* FirebaseCrashlytics */; };
+		D380FC1E2A9E48F80057104B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D380FC1D2A9E48F80057104B /* FirebaseMessaging */; };
+		D380FC212A9E59C70057104B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D380FC202A9E59C70057104B /* GoogleService-Info.plist */; };
+		D380FC252A9E66BA0057104B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D380FC242A9E66BA0057104B /* FirebaseFirestoreSwift */; };
+		D380FC272A9E66C10057104B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D380FC262A9E66C10057104B /* FirebaseStorage */; };
+		D380FC342AA0EB240057104B /* touristModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FC332AA0EB240057104B /* touristModel.swift */; };
+		D380FC352AA0EB240057104B /* touristModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FC332AA0EB240057104B /* touristModel.swift */; };
+		D380FC362AA0EB240057104B /* touristModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380FC332AA0EB240057104B /* touristModel.swift */; };
+		D3DF0B552AA0F03D003041C6 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B542AA0F03D003041C6 /* FirestoreManager.swift */; };
+		D3DF0B562AA0F03D003041C6 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B542AA0F03D003041C6 /* FirestoreManager.swift */; };
+		D3DF0B572AA0F03D003041C6 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B542AA0F03D003041C6 /* FirestoreManager.swift */; };
+		D3DF0B612AA1D560003041C6 /* TouristListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B602AA1D560003041C6 /* TouristListViewModel.swift */; };
+		D3DF0B622AA1D560003041C6 /* TouristListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B602AA1D560003041C6 /* TouristListViewModel.swift */; };
+		D3DF0B632AA1D560003041C6 /* TouristListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B602AA1D560003041C6 /* TouristListViewModel.swift */; };
+		D3DF0B652AA1D5B5003041C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B642AA1D5B5003041C6 /* OnboardingView.swift */; };
+		D3DF0B662AA1D5B5003041C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B642AA1D5B5003041C6 /* OnboardingView.swift */; };
+		D3DF0B672AA1D5B5003041C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B642AA1D5B5003041C6 /* OnboardingView.swift */; };
+		D3DF0B692AA1D5D8003041C6 /* TouristListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B682AA1D5D8003041C6 /* TouristListView.swift */; };
+		D3DF0B6A2AA1D5D8003041C6 /* TouristListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B682AA1D5D8003041C6 /* TouristListView.swift */; };
+		D3DF0B6B2AA1D5D8003041C6 /* TouristListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B682AA1D5D8003041C6 /* TouristListView.swift */; };
+		D3DF0B6E2AA1D624003041C6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B6D2AA1D624003041C6 /* SearchBar.swift */; };
+		D3DF0B6F2AA1D624003041C6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B6D2AA1D624003041C6 /* SearchBar.swift */; };
+		D3DF0B702AA1D624003041C6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B6D2AA1D624003041C6 /* SearchBar.swift */; };
+		D3DF0B722AA1F11B003041C6 /* Tipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B712AA1F11B003041C6 /* Tipo.swift */; };
+		D3DF0B732AA1F11B003041C6 /* Tipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B712AA1F11B003041C6 /* Tipo.swift */; };
+		D3DF0B742AA1F11B003041C6 /* Tipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B712AA1F11B003041C6 /* Tipo.swift */; };
+		D3DF0B772AA1F6DA003041C6 /* Provincias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B762AA1F6DA003041C6 /* Provincias.swift */; };
+		D3DF0B782AA1F6DA003041C6 /* Provincias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B762AA1F6DA003041C6 /* Provincias.swift */; };
+		D3DF0B792AA1F6DA003041C6 /* Provincias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B762AA1F6DA003041C6 /* Provincias.swift */; };
+		D3DF0B7F2AA20135003041C6 /* DataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B7E2AA20135003041C6 /* DataFilter.swift */; };
+		D3DF0B802AA20135003041C6 /* DataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B7E2AA20135003041C6 /* DataFilter.swift */; };
+		D3DF0B812AA20135003041C6 /* DataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B7E2AA20135003041C6 /* DataFilter.swift */; };
+		D3DF0B842AA23B86003041C6 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B832AA23B86003041C6 /* FilterView.swift */; };
+		D3DF0B852AA23B86003041C6 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B832AA23B86003041C6 /* FilterView.swift */; };
+		D3DF0B862AA23B86003041C6 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B832AA23B86003041C6 /* FilterView.swift */; };
+		D3DF0B882AA23D6C003041C6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B872AA23D6C003041C6 /* TabBar.swift */; };
+		D3DF0B892AA23D6C003041C6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B872AA23D6C003041C6 /* TabBar.swift */; };
+		D3DF0B8A2AA23D6C003041C6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B872AA23D6C003041C6 /* TabBar.swift */; };
+		D3DF0B8C2AA23E87003041C6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B8B2AA23E87003041C6 /* MapView.swift */; };
+		D3DF0B8D2AA23E87003041C6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B8B2AA23E87003041C6 /* MapView.swift */; };
+		D3DF0B8E2AA23E87003041C6 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B8B2AA23E87003041C6 /* MapView.swift */; };
+		D3DF0B942AA24286003041C6 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B932AA24286003041C6 /* MapViewModel.swift */; };
+		D3DF0B952AA24286003041C6 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B932AA24286003041C6 /* MapViewModel.swift */; };
+		D3DF0B962AA24286003041C6 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B932AA24286003041C6 /* MapViewModel.swift */; };
+		D3DF0B992AA24731003041C6 /* CustomerMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B982AA24731003041C6 /* CustomerMapPin.swift */; };
+		D3DF0B9A2AA24731003041C6 /* CustomerMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B982AA24731003041C6 /* CustomerMapPin.swift */; };
+		D3DF0B9B2AA24731003041C6 /* CustomerMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B982AA24731003041C6 /* CustomerMapPin.swift */; };
+		D3DF0B9D2AA24D3A003041C6 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B9C2AA24D3A003041C6 /* Coordinates.swift */; };
+		D3DF0B9E2AA24D3A003041C6 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B9C2AA24D3A003041C6 /* Coordinates.swift */; };
+		D3DF0B9F2AA24D3A003041C6 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0B9C2AA24D3A003041C6 /* Coordinates.swift */; };
+		D3DF0BA12AA25690003041C6 /* MapCallOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA02AA25690003041C6 /* MapCallOut.swift */; };
+		D3DF0BA22AA25690003041C6 /* MapCallOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA02AA25690003041C6 /* MapCallOut.swift */; };
+		D3DF0BA32AA25690003041C6 /* MapCallOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA02AA25690003041C6 /* MapCallOut.swift */; };
+		D3DF0BA62AA262A3003041C6 /* TouristDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA52AA262A3003041C6 /* TouristDetailView.swift */; };
+		D3DF0BA72AA262A3003041C6 /* TouristDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA52AA262A3003041C6 /* TouristDetailView.swift */; };
+		D3DF0BA82AA262A3003041C6 /* TouristDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA52AA262A3003041C6 /* TouristDetailView.swift */; };
+		D3DF0BAA2AA3B9BD003041C6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA92AA3B9BD003041C6 /* Reachability.swift */; };
+		D3DF0BAB2AA3B9BD003041C6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA92AA3B9BD003041C6 /* Reachability.swift */; };
+		D3DF0BAC2AA3B9BD003041C6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF0BA92AA3B9BD003041C6 /* Reachability.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D380FBF92A9E08280057104B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D380FBE02A9E08270057104B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D380FBE72A9E08270057104B;
+			remoteInfo = TUrMISMO;
+		};
+		D380FC032A9E08280057104B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D380FBE02A9E08270057104B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D380FBE72A9E08270057104B;
+			remoteInfo = TUrMISMO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D380FBE82A9E08270057104B /* TUrMISMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TUrMISMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D380FBEB2A9E08270057104B /* TUrMISMOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUrMISMOApp.swift; sourceTree = "<group>"; };
+		D380FBED2A9E08270057104B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D380FBEF2A9E08280057104B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D380FBF22A9E08280057104B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D380FBF82A9E08280057104B /* TUrMISMOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUrMISMOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D380FBFC2A9E08280057104B /* TUrMISMOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUrMISMOTests.swift; sourceTree = "<group>"; };
+		D380FC022A9E08280057104B /* TUrMISMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TUrMISMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D380FC062A9E08280057104B /* TUrMISMOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUrMISMOUITests.swift; sourceTree = "<group>"; };
+		D380FC082A9E08280057104B /* TUrMISMOUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUrMISMOUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D380FC202A9E59C70057104B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D380FC332AA0EB240057104B /* touristModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = touristModel.swift; sourceTree = "<group>"; };
+		D3DF0B542AA0F03D003041C6 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		D3DF0B602AA1D560003041C6 /* TouristListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristListViewModel.swift; sourceTree = "<group>"; };
+		D3DF0B642AA1D5B5003041C6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D3DF0B682AA1D5D8003041C6 /* TouristListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristListView.swift; sourceTree = "<group>"; };
+		D3DF0B6D2AA1D624003041C6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D3DF0B712AA1F11B003041C6 /* Tipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tipo.swift; sourceTree = "<group>"; };
+		D3DF0B762AA1F6DA003041C6 /* Provincias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provincias.swift; sourceTree = "<group>"; };
+		D3DF0B7E2AA20135003041C6 /* DataFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFilter.swift; sourceTree = "<group>"; };
+		D3DF0B832AA23B86003041C6 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		D3DF0B872AA23D6C003041C6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		D3DF0B8B2AA23E87003041C6 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D3DF0B932AA24286003041C6 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		D3DF0B982AA24731003041C6 /* CustomerMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMapPin.swift; sourceTree = "<group>"; };
+		D3DF0B9C2AA24D3A003041C6 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		D3DF0BA02AA25690003041C6 /* MapCallOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCallOut.swift; sourceTree = "<group>"; };
+		D3DF0BA52AA262A3003041C6 /* TouristDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristDetailView.swift; sourceTree = "<group>"; };
+		D3DF0BA92AA3B9BD003041C6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D380FBE52A9E08270057104B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D380FC1E2A9E48F80057104B /* FirebaseMessaging in Frameworks */,
+				D380FC1A2A9E48F80057104B /* FirebaseAnalyticsSwift in Frameworks */,
+				D380FC1C2A9E48F80057104B /* FirebaseCrashlytics in Frameworks */,
+				D380FC272A9E66C10057104B /* FirebaseStorage in Frameworks */,
+				D380FC252A9E66BA0057104B /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D380FBF52A9E08280057104B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D380FBFF2A9E08280057104B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D380FBDF2A9E08270057104B = {
+			isa = PBXGroup;
+			children = (
+				D380FBEA2A9E08270057104B /* TUrMISMO */,
+				D380FBFB2A9E08280057104B /* TUrMISMOTests */,
+				D380FC052A9E08280057104B /* TUrMISMOUITests */,
+				D380FBE92A9E08270057104B /* Products */,
+				D380FC232A9E66BA0057104B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D380FBE92A9E08270057104B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D380FBE82A9E08270057104B /* TUrMISMO.app */,
+				D380FBF82A9E08280057104B /* TUrMISMOTests.xctest */,
+				D380FC022A9E08280057104B /* TUrMISMOUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D380FBEA2A9E08270057104B /* TUrMISMO */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0BA92AA3B9BD003041C6 /* Reachability.swift */,
+				D3DF0BA42AA26272003041C6 /* Detail */,
+				D3DF0B6C2AA1D601003041C6 /* Search */,
+				D3DF0B5F2AA1D53B003041C6 /* Navigation */,
+				D3DF0B5E2AA1D52C003041C6 /* Map */,
+				D3DF0B5D2AA1D521003041C6 /* Lista */,
+				D3DF0B5C2AA1D516003041C6 /* Onboarding */,
+				D3DF0B532AA0F027003041C6 /* Firebase */,
+				D380FC322AA0EA9B0057104B /* Model */,
+				D380FC1F2A9E4A1B0057104B /* App */,
+				D380FC152A9E18690057104B /* SupportingFiles */,
+				D380FBF12A9E08280057104B /* Preview Content */,
+			);
+			path = TUrMISMO;
+			sourceTree = "<group>";
+		};
+		D380FBF12A9E08280057104B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D380FBF22A9E08280057104B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D380FBFB2A9E08280057104B /* TUrMISMOTests */ = {
+			isa = PBXGroup;
+			children = (
+				D380FBFC2A9E08280057104B /* TUrMISMOTests.swift */,
+			);
+			path = TUrMISMOTests;
+			sourceTree = "<group>";
+		};
+		D380FC052A9E08280057104B /* TUrMISMOUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D380FC062A9E08280057104B /* TUrMISMOUITests.swift */,
+				D380FC082A9E08280057104B /* TUrMISMOUITestsLaunchTests.swift */,
+			);
+			path = TUrMISMOUITests;
+			sourceTree = "<group>";
+		};
+		D380FC152A9E18690057104B /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D380FC202A9E59C70057104B /* GoogleService-Info.plist */,
+				D380FBEF2A9E08280057104B /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D380FC1F2A9E4A1B0057104B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D380FBEB2A9E08270057104B /* TUrMISMOApp.swift */,
+				D380FBED2A9E08270057104B /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D380FC232A9E66BA0057104B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D380FC322AA0EA9B0057104B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D380FC332AA0EB240057104B /* touristModel.swift */,
+				D3DF0B712AA1F11B003041C6 /* Tipo.swift */,
+				D3DF0B762AA1F6DA003041C6 /* Provincias.swift */,
+				D3DF0B9C2AA24D3A003041C6 /* Coordinates.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3DF0B532AA0F027003041C6 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B542AA0F03D003041C6 /* FirestoreManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		D3DF0B5C2AA1D516003041C6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B642AA1D5B5003041C6 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D3DF0B5D2AA1D521003041C6 /* Lista */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B602AA1D560003041C6 /* TouristListViewModel.swift */,
+				D3DF0B682AA1D5D8003041C6 /* TouristListView.swift */,
+			);
+			path = Lista;
+			sourceTree = "<group>";
+		};
+		D3DF0B5E2AA1D52C003041C6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B972AA2471A003041C6 /* Annotation */,
+				D3DF0B8B2AA23E87003041C6 /* MapView.swift */,
+				D3DF0B932AA24286003041C6 /* MapViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		D3DF0B5F2AA1D53B003041C6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B872AA23D6C003041C6 /* TabBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D3DF0B6C2AA1D601003041C6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B822AA23B6D003041C6 /* Filter */,
+				D3DF0B6D2AA1D624003041C6 /* SearchBar.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D3DF0B822AA23B6D003041C6 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B7E2AA20135003041C6 /* DataFilter.swift */,
+				D3DF0B832AA23B86003041C6 /* FilterView.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		D3DF0B972AA2471A003041C6 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0B982AA24731003041C6 /* CustomerMapPin.swift */,
+				D3DF0BA02AA25690003041C6 /* MapCallOut.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		D3DF0BA42AA26272003041C6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF0BA52AA262A3003041C6 /* TouristDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D380FBE72A9E08270057104B /* TUrMISMO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D380FC0C2A9E08280057104B /* Build configuration list for PBXNativeTarget "TUrMISMO" */;
+			buildPhases = (
+				D380FBE42A9E08270057104B /* Sources */,
+				D380FBE52A9E08270057104B /* Frameworks */,
+				D380FBE62A9E08270057104B /* Resources */,
+				D380FC222A9E5AAD0057104B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TUrMISMO;
+			packageProductDependencies = (
+				D380FC192A9E48F80057104B /* FirebaseAnalyticsSwift */,
+				D380FC1B2A9E48F80057104B /* FirebaseCrashlytics */,
+				D380FC1D2A9E48F80057104B /* FirebaseMessaging */,
+				D380FC242A9E66BA0057104B /* FirebaseFirestoreSwift */,
+				D380FC262A9E66C10057104B /* FirebaseStorage */,
+			);
+			productName = TUrMISMO;
+			productReference = D380FBE82A9E08270057104B /* TUrMISMO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D380FBF72A9E08280057104B /* TUrMISMOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D380FC0F2A9E08280057104B /* Build configuration list for PBXNativeTarget "TUrMISMOTests" */;
+			buildPhases = (
+				D380FBF42A9E08280057104B /* Sources */,
+				D380FBF52A9E08280057104B /* Frameworks */,
+				D380FBF62A9E08280057104B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D380FBFA2A9E08280057104B /* PBXTargetDependency */,
+			);
+			name = TUrMISMOTests;
+			productName = TUrMISMOTests;
+			productReference = D380FBF82A9E08280057104B /* TUrMISMOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D380FC012A9E08280057104B /* TUrMISMOUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D380FC122A9E08280057104B /* Build configuration list for PBXNativeTarget "TUrMISMOUITests" */;
+			buildPhases = (
+				D380FBFE2A9E08280057104B /* Sources */,
+				D380FBFF2A9E08280057104B /* Frameworks */,
+				D380FC002A9E08280057104B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D380FC042A9E08280057104B /* PBXTargetDependency */,
+			);
+			name = TUrMISMOUITests;
+			productName = TUrMISMOUITests;
+			productReference = D380FC022A9E08280057104B /* TUrMISMOUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D380FBE02A9E08270057104B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D380FBE72A9E08270057104B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					D380FBF72A9E08280057104B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D380FBE72A9E08270057104B;
+					};
+					D380FC012A9E08280057104B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D380FBE72A9E08270057104B;
+					};
+				};
+			};
+			buildConfigurationList = D380FBE32A9E08270057104B /* Build configuration list for PBXProject "TUrMISMO" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D380FBDF2A9E08270057104B;
+			packageReferences = (
+				D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = D380FBE92A9E08270057104B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D380FBE72A9E08270057104B /* TUrMISMO */,
+				D380FBF72A9E08280057104B /* TUrMISMOTests */,
+				D380FC012A9E08280057104B /* TUrMISMOUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D380FBE62A9E08270057104B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D380FBF32A9E08280057104B /* Preview Assets.xcassets in Resources */,
+				D380FBF02A9E08280057104B /* Assets.xcassets in Resources */,
+				D380FC212A9E59C70057104B /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D380FBF62A9E08280057104B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D380FC002A9E08280057104B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D380FC222A9E5AAD0057104B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D380FBE42A9E08270057104B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D380FC342AA0EB240057104B /* touristModel.swift in Sources */,
+				D380FBEE2A9E08270057104B /* ContentView.swift in Sources */,
+				D3DF0B692AA1D5D8003041C6 /* TouristListView.swift in Sources */,
+				D3DF0B612AA1D560003041C6 /* TouristListViewModel.swift in Sources */,
+				D3DF0B9D2AA24D3A003041C6 /* Coordinates.swift in Sources */,
+				D3DF0B842AA23B86003041C6 /* FilterView.swift in Sources */,
+				D3DF0B652AA1D5B5003041C6 /* OnboardingView.swift in Sources */,
+				D3DF0B992AA24731003041C6 /* CustomerMapPin.swift in Sources */,
+				D3DF0B7F2AA20135003041C6 /* DataFilter.swift in Sources */,
+				D3DF0BA62AA262A3003041C6 /* TouristDetailView.swift in Sources */,
+				D3DF0B8C2AA23E87003041C6 /* MapView.swift in Sources */,
+				D3DF0B722AA1F11B003041C6 /* Tipo.swift in Sources */,
+				D3DF0B6E2AA1D624003041C6 /* SearchBar.swift in Sources */,
+				D3DF0B882AA23D6C003041C6 /* TabBar.swift in Sources */,
+				D3DF0B942AA24286003041C6 /* MapViewModel.swift in Sources */,
+				D380FBEC2A9E08270057104B /* TUrMISMOApp.swift in Sources */,
+				D3DF0BA12AA25690003041C6 /* MapCallOut.swift in Sources */,
+				D3DF0B552AA0F03D003041C6 /* FirestoreManager.swift in Sources */,
+				D3DF0BAA2AA3B9BD003041C6 /* Reachability.swift in Sources */,
+				D3DF0B772AA1F6DA003041C6 /* Provincias.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D380FBF42A9E08280057104B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DF0BA72AA262A3003041C6 /* TouristDetailView.swift in Sources */,
+				D3DF0B852AA23B86003041C6 /* FilterView.swift in Sources */,
+				D3DF0BAB2AA3B9BD003041C6 /* Reachability.swift in Sources */,
+				D3DF0B6F2AA1D624003041C6 /* SearchBar.swift in Sources */,
+				D380FC352AA0EB240057104B /* touristModel.swift in Sources */,
+				D3DF0B6A2AA1D5D8003041C6 /* TouristListView.swift in Sources */,
+				D3DF0B8D2AA23E87003041C6 /* MapView.swift in Sources */,
+				D3DF0B782AA1F6DA003041C6 /* Provincias.swift in Sources */,
+				D3DF0B562AA0F03D003041C6 /* FirestoreManager.swift in Sources */,
+				D3DF0B9E2AA24D3A003041C6 /* Coordinates.swift in Sources */,
+				D3DF0B802AA20135003041C6 /* DataFilter.swift in Sources */,
+				D380FBFD2A9E08280057104B /* TUrMISMOTests.swift in Sources */,
+				D3DF0B9A2AA24731003041C6 /* CustomerMapPin.swift in Sources */,
+				D3DF0BA22AA25690003041C6 /* MapCallOut.swift in Sources */,
+				D3DF0B662AA1D5B5003041C6 /* OnboardingView.swift in Sources */,
+				D3DF0B622AA1D560003041C6 /* TouristListViewModel.swift in Sources */,
+				D3DF0B952AA24286003041C6 /* MapViewModel.swift in Sources */,
+				D3DF0B892AA23D6C003041C6 /* TabBar.swift in Sources */,
+				D3DF0B732AA1F11B003041C6 /* Tipo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D380FBFE2A9E08280057104B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D380FC362AA0EB240057104B /* touristModel.swift in Sources */,
+				D380FC092A9E08280057104B /* TUrMISMOUITestsLaunchTests.swift in Sources */,
+				D3DF0B6B2AA1D5D8003041C6 /* TouristListView.swift in Sources */,
+				D3DF0B632AA1D560003041C6 /* TouristListViewModel.swift in Sources */,
+				D3DF0B9F2AA24D3A003041C6 /* Coordinates.swift in Sources */,
+				D3DF0B862AA23B86003041C6 /* FilterView.swift in Sources */,
+				D3DF0B672AA1D5B5003041C6 /* OnboardingView.swift in Sources */,
+				D3DF0B9B2AA24731003041C6 /* CustomerMapPin.swift in Sources */,
+				D3DF0B812AA20135003041C6 /* DataFilter.swift in Sources */,
+				D3DF0BA82AA262A3003041C6 /* TouristDetailView.swift in Sources */,
+				D3DF0B8E2AA23E87003041C6 /* MapView.swift in Sources */,
+				D3DF0B742AA1F11B003041C6 /* Tipo.swift in Sources */,
+				D3DF0B702AA1D624003041C6 /* SearchBar.swift in Sources */,
+				D3DF0B8A2AA23D6C003041C6 /* TabBar.swift in Sources */,
+				D3DF0B962AA24286003041C6 /* MapViewModel.swift in Sources */,
+				D380FC072A9E08280057104B /* TUrMISMOUITests.swift in Sources */,
+				D3DF0BA32AA25690003041C6 /* MapCallOut.swift in Sources */,
+				D3DF0B572AA0F03D003041C6 /* FirestoreManager.swift in Sources */,
+				D3DF0BAC2AA3B9BD003041C6 /* Reachability.swift in Sources */,
+				D3DF0B792AA1F6DA003041C6 /* Provincias.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D380FBFA2A9E08280057104B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D380FBE72A9E08270057104B /* TUrMISMO */;
+			targetProxy = D380FBF92A9E08280057104B /* PBXContainerItemProxy */;
+		};
+		D380FC042A9E08280057104B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D380FBE72A9E08270057104B /* TUrMISMO */;
+			targetProxy = D380FC032A9E08280057104B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D380FC0A2A9E08280057104B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D380FC0B2A9E08280057104B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D380FC0D2A9E08280057104B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"TUrMISMO/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarkelJM.TUrMISMO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D380FC0E2A9E08280057104B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TUrMISMO/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarkelJM.TUrMISMO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D380FC102A9E08280057104B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarkelJM.TUrMISMOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TUrMISMO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TUrMISMO";
+			};
+			name = Debug;
+		};
+		D380FC112A9E08280057104B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarkelJM.TUrMISMOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TUrMISMO.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TUrMISMO";
+			};
+			name = Release;
+		};
+		D380FC132A9E08280057104B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarkelJM.TUrMISMOUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TUrMISMO;
+			};
+			name = Debug;
+		};
+		D380FC142A9E08280057104B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MarkelJM.TUrMISMOUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TUrMISMO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D380FBE32A9E08270057104B /* Build configuration list for PBXProject "TUrMISMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D380FC0A2A9E08280057104B /* Debug */,
+				D380FC0B2A9E08280057104B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D380FC0C2A9E08280057104B /* Build configuration list for PBXNativeTarget "TUrMISMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D380FC0D2A9E08280057104B /* Debug */,
+				D380FC0E2A9E08280057104B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D380FC0F2A9E08280057104B /* Build configuration list for PBXNativeTarget "TUrMISMOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D380FC102A9E08280057104B /* Debug */,
+				D380FC112A9E08280057104B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D380FC122A9E08280057104B /* Build configuration list for PBXNativeTarget "TUrMISMOUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D380FC132A9E08280057104B /* Debug */,
+				D380FC142A9E08280057104B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D380FC192A9E48F80057104B /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		D380FC1B2A9E48F80057104B /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		D380FC1D2A9E48F80057104B /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		D380FC242A9E66BA0057104B /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		D380FC262A9E66C10057104B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D380FC182A9E48F80057104B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D380FBE02A9E08270057104B /* Project object */;
+}
