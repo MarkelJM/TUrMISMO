@@ -25,26 +25,7 @@ class FirestoreManager {
         }
     }
 
-    /*
-     
-     //FUNCIONA PERFECTAMENTE
-    func getTouristData(completion: @escaping ([TouristModel]) -> Void) {
-        let db = Firestore.firestore()
-        let collectionRef = db.collection("dataTurismoJCyL")
-
-        collectionRef.getDocuments { (querySnapshot, error) in
-            if let error = error {
-                print("Error getting documents: \(error)")
-                completion([])
-            } else {
-                let models = querySnapshot?.documents.compactMap { document in
-                    return TouristModel(document: document)
-                } ?? []
-                completion(models)
-            }
-        }
-    }
-     */
+    
     func getTouristData(completion: @escaping ([TouristModel]) -> Void) {
         let db = Firestore.firestore()
         let collectionRef = db.collection("dataTurismoJCyL")

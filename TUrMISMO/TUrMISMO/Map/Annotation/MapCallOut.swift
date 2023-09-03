@@ -53,44 +53,7 @@ struct CalloutView: View {
 
 
 
-/*
-import SwiftUI
 
-struct CalloutView: View {
-    var place: TouristModel
-    var closeAction: () -> Void
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text(place.nombre ?? "")
-                .font(.headline)
-            NavigationLink(destination: TouristDetailView(tourist: place)) {
-                Text("Información")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(5)
-            }
-            Button(action: {
-                // Acción para el botón de "Cerrar"
-                self.closeAction()
-            }) {
-                Text("Cerrar")
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(5)
-            }
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 10)
-        .padding()
-    }
-}
-*/
 /*
 struct MapCallOut_Previews: PreviewProvider {
     static var previews: some View {
