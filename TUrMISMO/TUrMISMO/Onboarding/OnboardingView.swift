@@ -4,13 +4,15 @@
 //
 //  Created by Markel Juaristi on 1/9/23.
 //
-
 import SwiftUI
 
 struct OnboardingView: View {
-    @Binding var isOnboardingCompleted: Bool
-    @State private var isLoading = false
+    @ObservedObject var appState: AppState
+    @State private var progressValue: Double = 0.0
     @State private var showAlert = false
+    let animationDuration: Double = 2.0  // Duración de la animación aumentada para dar tiempo a la comprobación
+    
+    let keychainManager = KeychainManager()
     
     var body: some View {
         GeometryReader { geometry in
@@ -31,52 +33,46 @@ struct OnboardingView: View {
 
                     Spacer()
 
-                    // Botón
-                    Button(action: {
-                        if Reachability.isConnectedToNetwork() {
-                            isLoading = true
-                            // Simula una carga de datos de 1 segundo
-                            DispatchQueue.global().async {
-                                sleep(1)
-                                DispatchQueue.main.async {
-                                    isLoading = false
-                                    isOnboardingCompleted = true
+                    // Barra de progreso
+                    ProgressView(value: progressValue, total: 1.0)
+                        .progressViewStyle(LinearProgressViewStyle(tint: Color.white))
+                        .frame(height: 20)
+                        .padding(.horizontal, 50)
+                        .onAppear {
+                            if Reachability.isConnectedToNetwork() {
+                                withAnimation(.linear(duration: animationDuration)) {
+                                    progressValue = 1.0
                                 }
+                                DispatchQueue.global().async {
+                                    sleep(UInt32(animationDuration))
+                                    DispatchQueue.main.async {
+                                        if keychainManager.getToken() != nil {
+                                            // Si hay un token, se pasa a la vista principal.
+                                            appState.currentView = .touristList
+                                        } else {
+                                            // Si no hay un token, se pasa a la vista de inicio de sesión.
+                                            appState.currentView = .login
+                                        }
+                                    }
+                                }
+                            } else {
+                                showAlert = true
                             }
-                        } else {
-                            showAlert = true
                         }
-                    }) {
-                        if isLoading {
-                            ProgressView()
-                                .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 39/255, green: 73/255, blue: 106/255)))
-                                .padding(30)
-                                .background(Circle().fill(Color.white))
-                        } else {
-                            Text("Iniciar")
-                                .font(.largeTitle)
-                                .padding(30)
-                                .background(Circle().fill(Color.white))
-                                .foregroundColor(Color(red: 39/255, green: 73/255, blue: 106/255))
-                        }
-                    }
-                    .padding(.bottom, 89)
-                    .alert(isPresented: $showAlert) {
-                        Alert(title: Text("Sin conexión a Internet"), message: Text("Por favor, conecta tu dispositivo a Internet y vuelve a intentarlo."), dismissButton: .default(Text("OK")))
-                    }
 
                     Spacer()
                 }
             }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Sin conexión a Internet"), message: Text("Por favor, conecta tu dispositivo a Internet y vuelve a intentarlo."), dismissButton: .default(Text("OK")))
+            }
         }
-
     }
 }
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView(isOnboardingCompleted: .constant(false))
+        OnboardingView(appState: AppState())
     }
 }
-
 

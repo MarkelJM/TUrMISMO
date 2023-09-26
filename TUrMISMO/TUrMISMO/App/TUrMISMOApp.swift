@@ -25,15 +25,13 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct TUrMISMOApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @State private var isOnboardingCompleted = false
+    @StateObject var appState = AppState()
     
     var body: some Scene {
         WindowGroup {
-            if isOnboardingCompleted {
-                TabBarView()
-            } else {
-                OnboardingView(isOnboardingCompleted: $isOnboardingCompleted)
-            }
+            ContentView()
+                .environmentObject(appState)
         }
     }
 }
+

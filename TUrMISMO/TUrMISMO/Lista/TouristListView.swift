@@ -51,7 +51,34 @@ struct TouristListView: View {
                                     .stroke(Color(red: 39/255, green: 73/255, blue: 106/255), lineWidth: 2)
                             )
                         }
+                        
+                        Button(action: {
+                            self.viewModel.orderByDistance()
+                        }) {
+                            Text("Ordenar cercania")
+                                .font(.body)
+                        }
+                        .padding(.horizontal)
+                        .background(Color(red: 70/255, green: 130/255, blue: 180/255))  
+                        .foregroundColor(Color.white)
+                        .cornerRadius(8)
+                        .padding(.leading)
+
                         Spacer()
+
+                        Button(action: {
+                            self.viewModel.orderByRating()
+                        }) {
+                            Text("Ordenar rating")
+                                .font(.body)
+                        }
+                        .padding(.horizontal)
+                        .background(Color(red: 25/255, green: 58/255, blue: 95/255))
+                        .foregroundColor(Color.white)
+                        .cornerRadius(8)
+                        .padding(.leading)
+
+
                     }
                     .padding(.vertical, 5)
                     .background(Color.blue.opacity(0.1))
@@ -62,21 +89,29 @@ struct TouristListView: View {
                                    selectedTipo: self.$viewModel.selectedTipo,
                                    showingFilterSheet: self.$showingFilterSheet)
                     }
+                    
                     List(viewModel.touristModels) { model in
-                        NavigationLink(destination: TouristDetailView(tourist: model, isTabViewHidden: self.$isTabViewHidden).onAppear {
+                        
+                        HStack {
+                            viewModel.getImageForTipo(tipo: model.tipo ?? "")
+                                .foregroundColor(Color.blue)
+                            Text(model.nombre ?? "")
+                            Spacer()
+                            Button(action: {
+                                viewModel.toggleFavorite(company: model)
+                            }) {
+                                Image(systemName: viewModel.favorites.contains(model.id) ? "heart.fill" : "heart")
+                                    .foregroundColor(viewModel.favorites.contains(model.id) ? .red : .gray)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                        // Esta parte permite navegar al detalle al tocar cualquier parte del HStack
+                        .background(NavigationLink("", destination: TouristDetailView(tourist: model, isTabViewHidden: self.$isTabViewHidden, viewModel: TouristDetailViewModel(tourist: model)).onAppear {
                             self.isTabViewHidden = true
                         }.onDisappear {
                             self.isTabViewHidden = false
-                        }) {
-                            HStack {
-                                viewModel.getImageForTipo(tipo: model.tipo ?? "")
-                                    .foregroundColor(Color.blue)
-                                Text(model.nombre ?? "")
-                            }
-                        }
+                        }).opacity(0))
                     }
-                    .onAppear(perform: viewModel.fetchTouristData)
-
                 }
                 
                 // Rectángulo en la parte inferior para tapar la lista
@@ -90,10 +125,12 @@ struct TouristListView: View {
             }
             .navigationBarTitle("Actividades")
             .navigationBarHidden(true)
-            .onAppear(perform: viewModel.fetchTouristData)
+            .onAppear {
+                viewModel.fetchTouristData()
+                viewModel.setupLocationManager() // Configura el administrador de ubicaciones
+            }
         }
     }
-
 }
 
 struct TouristListView_Previews: PreviewProvider {

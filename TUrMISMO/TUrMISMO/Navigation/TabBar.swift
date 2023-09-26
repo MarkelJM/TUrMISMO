@@ -16,6 +16,8 @@ struct TabBarView: View {
         span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3)
     )
     @State private var isTabViewHidden: Bool = true
+    
+    let sharedFavorites = SharedFavorites()
 
     var body: some View {
         TabView {
@@ -37,6 +39,19 @@ struct TabBarView: View {
                 VStack {
                     Image(systemName: "map")
                     Text("Mapa")
+                }
+            }
+            .background(Color.white)
+            
+            NavigationView {
+                FavoritosView(isTabViewHidden: $isTabViewHidden)
+                    .environmentObject(sharedFavorites)
+            }
+
+            .tabItem {
+                VStack {
+                    Image(systemName: "heart.fill")
+                    Text("Favoritos")
                 }
             }
             .background(Color.white)
